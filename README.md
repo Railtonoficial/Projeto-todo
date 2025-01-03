@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Todo App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplicação de gerenciamento de tarefas desenvolvida com Laravel e Docker, proporcionando uma interface intuitiva para organizar e acompanhar suas atividades diárias.
 
-## About Laravel
+## Tecnologias Utilizadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Laravel**: Framework PHP para desenvolvimento web.
+- **Docker**: Plataforma para criação e gerenciamento de contêineres.
+- **MySQL**: Banco de dados relacional.
+- **Nginx**: Servidor web.
+- **PHP-FPM**: Gerenciador de processos FastCGI para PHP.
+- **PHPMyAdmin**: Ferramenta de administração do MySQL.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Registro de usuários com confirmação de senha.
+- Autenticação de usuários.
+- Criação, leitura, atualização e exclusão (CRUD) de tarefas.
+- Filtro de tarefas por data.
+- Contagem de tarefas concluídas e não concluídas.
+- Interface intuitiva para gerenciamento de tarefas.
 
-## Learning Laravel
+## Estrutura do Projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Docker
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **app**: Contêiner da aplicação Laravel.
+- **db**: Contêiner do banco de dados MySQL.
+- **phpmyadmin**: Contêiner do PHPMyAdmin para administração do banco de dados.
+- **nginx**: Contêiner do servidor web Nginx.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Laravel
 
-## Laravel Sponsors
+- **Controllers**: Controladores para gerenciar as requisições HTTP.
+- **Models**: Modelos para representar as entidades do banco de dados.
+- **Views**: Arquivos Blade para renderização das páginas.
+- **Routes**: Definição das rotas da aplicação.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Configuração
 
-### Premium Partners
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/todo-app.git
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd todo-app
+    ```
 
-## Contributing
+3. Copie o arquivo `.env.example` para `.env` e configure as variáveis de ambiente:
+    ```bash
+    cp .env.example .env
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Construa e inicie os contêineres Docker:
+    ```bash
+    docker-compose up --build
+    ```
 
-## Code of Conduct
+5. Acesse a aplicação no navegador:
+    ```
+    http://localhost
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Melhorias de Desempenho
 
-## Security Vulnerabilities
+- Habilitação do OPcache para cache de scripts PHP compilados.
+- Utilização de cache no Laravel para armazenar dados frequentemente acessados.
+- Otimização das consultas ao banco de dados com índices apropriados.
+- Configuração de cache de resposta no Nginx.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Contribuição
 
-## License
+1. Faça um fork do projeto.
+2. Crie uma nova branch:
+    ```bash
+    git checkout -b minha-nova-feature
+    ```
+3. Faça suas alterações e commit:
+    ```bash
+    git commit -m 'Adiciona nova feature'
+    ```
+4. Envie para o repositório remoto:
+    ```bash
+    git push origin minha-nova-feature
+    ```
+5. Abra um Pull Request.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
