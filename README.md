@@ -63,30 +63,6 @@ Aplicação de gerenciamento de tarefas desenvolvida com Laravel e PHP, proporci
     http://localhost
     ```
 
-## Melhorias de Desempenho
-
-- Habilitação do OPcache para cache de scripts PHP compilados.
-- Utilização de cache no Laravel para armazenar dados frequentemente acessados.
-- Otimização das consultas ao banco de dados com índices apropriados.
-- Configuração de cache de resposta no Nginx.
-
-## Contribuição
-
-1. Faça um fork do projeto.
-2. Crie uma nova branch:
-    ```bash
-    git checkout -b minha-nova-feature
-    ```
-3. Faça suas alterações e commit:
-    ```bash
-    git commit -m 'Adiciona nova feature'
-    ```
-4. Envie para o repositório remoto:
-    ```bash
-    git push origin minha-nova-feature
-    ```
-5. Abra um Pull Request.
-
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
