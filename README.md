@@ -1,6 +1,6 @@
 # Todo App
 
-Aplicação de gerenciamento de tarefas desenvolvida com Laravel e Docker, proporcionando uma interface intuitiva para organizar e acompanhar suas atividades diárias.
+Aplicação de gerenciamento de tarefas desenvolvida com Laravel e PHP, proporcionando uma interface intuitiva para organizar e acompanhar suas atividades diárias.
 
 ## Tecnologias Utilizadas
 
